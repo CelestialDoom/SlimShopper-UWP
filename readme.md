@@ -2,7 +2,7 @@
 # SlimShopper UWP
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.png?v=103)](https://opensource.org/licenses/GPL-3.0/)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
-[![HitCount](http://hits.dwyl.com/CelestialDoom/The-Unofficial-Amazon-App.svg)](http://hits.dwyl.com/CelestialDoom/The-Unofficial-Amazon-App)
+[![HitCount](http://hits.dwyl.io/CelestialDoom/SlimShopper-UWP.svg)](http://hits.dwyl.io/CelestialDoom/SlimShopper-UWP)
 [![GitHub contributors](https://img.shields.io/github/contributors/CelestialDoom/The-Unofficial-Amazon-App.svg)](https://github.com/CelestialDoom/SlimShopper-UWP/graphs/contributors)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/CelestialDoom/SlimShopper-UWP/issues)
 
