@@ -50,6 +50,16 @@ Public NotInheritable Class MainPage
         Menu.Visibility = Visibility.Collapsed
     End Sub
 
+    Private Async Sub hyperDev_Click(sender As Object, e As RoutedEventArgs) Handles hyperDev.Click
+        Dim DevURL = New Uri("https://github.com/CelestialDoom/")
+        Await Windows.System.Launcher.LaunchUriAsync(DevURL)
+    End Sub
+
+    Private Async Sub hyperLogo_Click(sender As Object, e As RoutedEventArgs) Handles hyperLogo.Click
+        Dim logoURL = New Uri("http://www.iconarchive.com/show/ios7-icons-by-icons8/Ecommerce-Shopping-Cart-Empty-icon.html")
+        Await Windows.System.Launcher.LaunchUriAsync(logoURL)
+    End Sub
+
     Private Sub lstCountry_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles lstCountry.SelectionChanged
         Dim selectedindex As Integer
         Dim selectedValue As Integer
@@ -57,7 +67,7 @@ Public NotInheritable Class MainPage
         If selectedindex > -1 Then
             CountryChoice.Visibility = Visibility.Collapsed
             Dim value As Object = localSettings.Values("STORED_COUNTRY")
-            localSettings.Values("STORED_ID") = selectedindex
+            localSettings.Values("STORED_COUNTRY") = selectedindex
             selectedValue = localSettings.Values("STORED_COUNTRY")
             wv.Source = New Uri("https://www.amazon." & CountryURL(selectedValue) & "/")
         End If
@@ -74,7 +84,7 @@ Public NotInheritable Class MainPage
         lstCountry.ItemsSource = LoadCountries()
         AddHandler HardwareButtons.BackPressed, AddressOf BackPressed
         If Stored_ID Is Nothing Then
-            'localSettings.Values("STORED_ID") = "0"
+            'localSettings.Values("STORED_COUNTRY") = "0"
             CountryChoice.Visibility = Visibility.Visible
         Else
             CountryValue = Stored_ID
@@ -96,14 +106,14 @@ Public NotInheritable Class MainPage
     Private Sub MyAccount_Click(sender As Object, e As RoutedEventArgs) Handles MyAccount.Click
         CloseMenu()
         Dim selectedValue As Integer
-        selectedValue = localSettings.Values("STORED_ID")
+        selectedValue = localSettings.Values("STORED_COUNTRY")
         wv.Source = New Uri("https://www.amazon." & CountryURL(selectedValue) & "/gp/css/homepage.html/ref=nav_youraccount_ya")
     End Sub
 
     Private Sub MyOrders_Click(sender As Object, e As RoutedEventArgs) Handles MyOrders.Click
         CloseMenu()
         Dim selectedValue As Integer
-        selectedValue = localSettings.Values("STORED_ID")
+        selectedValue = localSettings.Values("STORED_COUNTRY")
         wv.Source = New Uri("https://www.amazon." & CountryURL(selectedValue) & "/gp/css/order-history/ref=nav_youraccount_order")
     End Sub
 

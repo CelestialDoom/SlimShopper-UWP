@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="ab71c07d-9e44-4d7d-88d9-fe30237c03d9" Publisher="CN=celes" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="ab71c07d-9e44-4d7d-88d9-fe30237c03d9" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="44540ZeroGuru.SlimShopperUWP" Publisher="CN=F3CEE303-50E2-4387-8B39-C2EF92E59CDE" Version="0.0.1.0" />
+  <mp:PhoneIdentity PhoneProductId="683c1564-8599-4bba-9d2b-505202c7cef7" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>SlimShopper UWP</DisplayName>
-    <PublisherDisplayName>celes</PublisherDisplayName>
+    <PublisherDisplayName>APRA.tech</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
