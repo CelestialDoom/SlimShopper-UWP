@@ -7,79 +7,106 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#FFFF9900">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="5,5,5,5" CornerRadius="5,5,5,5">
         <ProgressRing x:Name="Prog_Ring" Width="75" Height="75" HorizontalAlignment="Center" Foreground="#FFFF9900" />
-        <Button x:Name="TFS" Content="&#xE898;" FontFamily="Segoe MDL2 Assets" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFFF9900" Canvas.ZIndex="1" FontSize="24" BorderBrush="Black" Margin="0,0,10,10" Padding="4,4,4,4" BorderThickness="2,2,2,2" Visibility="Visible" />
-        <Button x:Name="BFS" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFFF9900" Canvas.ZIndex="1" FontSize="24" BorderBrush="Black" Margin="0,0,52,10" Padding="4,4,4,4" BorderThickness="2,2,2,2" Visibility="Visible" />
-        <Button x:Name="XFS" Content="&#xE750;" FontFamily="Segoe MDL2 Assets" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFFF9900" Canvas.ZIndex="1" FontSize="24" BorderBrush="Black" Margin="0,0,52,10" Padding="4,4,4,4" BorderThickness="2,2,2,2" Visibility="Collapsed" />
-        <Button x:Name="More" Content="&#xE712;" FontFamily="Segoe MDL2 Assets" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="#FFFF9900" Canvas.ZIndex="1" FontSize="24" BorderBrush="Black" Margin="10,0,0,10" Padding="4,4,4,4" BorderThickness="2,2,2,2" />
-        <WebView x:Name="wv" />
-        <Grid x:Name="Menu" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Canvas.ZIndex="1" Background="Black" HorizontalAlignment="Center" Visibility="Collapsed" VerticalAlignment="Center" Width="200">
-            <Button x:Name="CM" Content="&#xE711;" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Canvas.ZIndex="1" Background="#00000000" FontFamily="Segoe MDL2 Assets" Width="50" Height="50" Margin="139,0,0,0" />
+        <Grid HorizontalAlignment="Right" Height="40" Width="40" VerticalAlignment="Bottom" Margin="0,0,10,10" BorderBrush="Black" Background="#FFFF9900" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Canvas.ZIndex="1">
+            <Button x:Name="TFS" Content="&#xE898;" FontFamily="Segoe MDL2 Assets" Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{x:Null}" Canvas.ZIndex="1" FontSize="24" BorderBrush="Black" Padding="4,4,4,4" BorderThickness="0,0,0,0" Visibility="Visible" />
+        </Grid>
+        <Grid HorizontalAlignment="Right" Height="40" Width="40" VerticalAlignment="Bottom" Margin="0,0,55,10" BorderBrush="Black" Background="#FFFF9900" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Canvas.ZIndex="1">
+            <Button x:Name="BFS" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets" Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{x:Null}" Canvas.ZIndex="1" FontSize="24" BorderBrush="{x:Null}" Padding="4,4,4,4" BorderThickness="0,0,0,0" Visibility="Visible" />
+            <Button x:Name="XFS" Content="&#xE750;" FontFamily="Segoe MDL2 Assets" Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{x:Null}" Canvas.ZIndex="1" FontSize="24" BorderBrush="{x:Null}" Padding="4,4,4,4" BorderThickness="0,0,0,0" Visibility="Collapsed" />
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="40" Width="40" VerticalAlignment="Bottom" Margin="10,0,0,10" BorderBrush="Black" Background="#FFFF9900" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Canvas.ZIndex="1">
+            <Button x:Name="More" Content="&#xE712;" FontFamily="Segoe MDL2 Assets" Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{x:Null}" Canvas.ZIndex="1" FontSize="24" BorderBrush="{x:Null}" Padding="4,4,4,4" BorderThickness="0,0,0,0" />
+        </Grid>
+        <WebView x:Name="wv" Visibility="Visible" />
+        <Grid x:Name="Menu" BorderBrush="#FF020202" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Canvas.ZIndex="1" Background="#FFFF9900" HorizontalAlignment="Center" Visibility="Collapsed" VerticalAlignment="Center" Width="200">
+            <Button x:Name="CM" Content="&#xE711;" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Top" Canvas.ZIndex="1" Background="#00000000" FontFamily="Segoe MDL2 Assets" Width="50" Height="50" Margin="139,0,0,0" />
             <StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,0,10,0" Height="45">
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="MyAccount" FontFamily="Segoe MDL2 Assets" Content="&#xE77B;"
-                    Width="50" Height="50" Background="Transparent" Foreground="White" />
-                    <TextBlock Text="My Account" FontSize="18" VerticalAlignment="Center" Foreground="White" />
+                    Width="50" Height="50" Background="Transparent" Foreground="Black" />
+                    <TextBlock Text="My Account" FontSize="18" VerticalAlignment="Center" Foreground="Black" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="MyOrders" FontFamily="Segoe MDL2 Assets" Content="&#xE7BF;"
-                    Width="50" Height="50" Background="Transparent" Foreground="White" />
-                    <TextBlock Text="My Orders" FontSize="18" VerticalAlignment="Center" Foreground="White" />
+                    Width="50" Height="50" Background="Transparent" Foreground="Black" />
+                    <TextBlock Text="My Orders" FontSize="18" VerticalAlignment="Center" Foreground="Black" />
                 </StackPanel>
-
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="About" FontFamily="Segoe MDL2 Assets" Content="&#xE897;"
-                        Width="50" Height="50" Background="Transparent" Foreground="White" />
-                    <TextBlock Text="About" FontSize="18" VerticalAlignment="Center" Foreground="White" />
+                        Width="50" Height="50" Background="Transparent" Foreground="Black" />
+                    <TextBlock Text="About" FontSize="18" VerticalAlignment="Center" Foreground="Black" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="Settings" FontFamily="Segoe MDL2 Assets" Content="&#xE909;"
-                    Width="50" Height="50" Background="Transparent" Foreground="White" />
-                    <TextBlock Text="Country Choice" FontSize="18" VerticalAlignment="Center" Foreground="White" />
+                    Width="50" Height="50" Background="Transparent" Foreground="Black" />
+                    <TextBlock Text="Country Choice" FontSize="18" VerticalAlignment="Center" Foreground="Black" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="AppSettings" FontFamily="Segoe MDL2 Assets" Content="&#xE713;"
+                    Width="50" Height="50" Background="Transparent" Foreground="Black" />
+                    <TextBlock Text="App Settings" FontSize="18" VerticalAlignment="Center" Foreground="Black" />
                 </StackPanel>
             </StackPanel>
         </Grid>
-        <Grid x:Name="CountryChoice" Background="White" VerticalAlignment="Stretch" Margin="10,10,10,10" Visibility="Collapsed" Canvas.ZIndex="2">
+        <Grid x:Name="Sett" BorderBrush="#FF020202" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Canvas.ZIndex="1" Background="#FFFF9900" HorizontalAlignment="Center" Visibility="Collapsed" VerticalAlignment="Center" Width="261" Height="300" Margin="0,0,0,0">
+            <Button x:Name="CS" Content="&#xE711;" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Top" Canvas.ZIndex="1" Background="#00000000" FontFamily="Segoe MDL2 Assets" Width="50" Height="50" Margin="139,0,0,0" />
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,0,10,0" Height="45">
+                </StackPanel>
+                <StackPanel>
+                    <ToggleSwitch x:Name="togg_FS" Header="Set fullscreen" HorizontalAlignment="Center" VerticalAlignment="Stretch" Foreground="Black" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,0,10,0" Height="45">
+                </StackPanel>
+                <StackPanel>
+                    <RadioButton x:Name="RadioReset" Content="Reset All Settings" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="CountryChoice" Background="#FFFF9900" VerticalAlignment="Stretch" Margin="10,10,10,10" Visibility="Collapsed" Canvas.ZIndex="2" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="2,2,2,2">
             <TextBlock Text="Coutry" Foreground="Black" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,10,0,0" TextAlignment="Center" />
             <Button x:Name="CloseSettings" Content="&#xE711;" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Canvas.ZIndex="1" Background="#00000000" FontFamily="Segoe MDL2 Assets" Width="32" />
             <ListView x:Name="lstCountry" HorizontalAlignment="Stretch" Margin="10,42,10,10" VerticalAlignment="Stretch" Foreground="Black" />
         </Grid>
-        <Grid x:Name="Info" Visibility="Collapsed" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Canvas.ZIndex="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="569" Background="#FFFF9900">
-            <Button x:Name="CloseGrid" Content="&#xE711;" Foreground="Black" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Canvas.ZIndex="1" Background="#00000000" FontFamily="Segoe MDL2 Assets" />
+        <Grid x:Name="Info" Visibility="Collapsed" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Canvas.ZIndex="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="360" Height="569" Background="#FFFF9900">
+            <Button x:Name="CloseGrid" Content="&#xE711;" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Canvas.ZIndex="1" Background="#00000000" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" />
             <Pivot x:Name="PivotSettingsAbout" Foreground="White" Background="#FFFF9900" Margin="2,39,2,2">
                 <PivotItem x:Name="_PivotAbout" Header="About" Foreground="White">
                     <StackPanel>
                         <Image Height="100" HorizontalAlignment="Left" Source="Assets/Square44x44Logo.targetsize-256.png" />
-                        <TextBlock x:Name="AN" FontSize="20" TextWrapping="Wrap" Text="The Unofficial Amazon App" />
-                        <TextBlock  Name="version" Text="version" />
-                        <ScrollViewer x:Name="ScrollViewAbout" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="5,5,5,5" BorderBrush="#FFA0A0A0" Height="220">
-                            <TextBlock x:Name="abouttext" TextWrapping="Wrap" Text="privacy" />
+                        <TextBlock x:Name="AN" FontSize="20" TextWrapping="Wrap" Text="The Unofficial Amazon App" Foreground="Black" />
+                        <TextBlock  Name="version" Text="version" Foreground="Black" />
+                        <ScrollViewer x:Name="ScrollViewAbout" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="0,5,0,0" BorderBrush="#FFA0A0A0" Height="220">
+                            <TextBlock x:Name="abouttext" TextWrapping="Wrap" Text="privacy" Foreground="Black" />
                         </ScrollViewer>
                     </StackPanel>
                 </PivotItem>
                 <PivotItem x:Name="_PivotCredits" Header="Credits" Foreground="White">
                     <StackPanel>
-                        <TextBlock x:Name="developers" Text="Developers" FontSize="24" />
-                        <HyperlinkButton x:Name="hyperDev" Content="Celestial Doom" HorizontalAlignment="Left" VerticalAlignment="Stretch" FontSize="22" Visibility="Visible" Foreground="White" FontWeight="Bold" />
+                        <TextBlock x:Name="developers" Text="Developers" FontSize="24" Foreground="Black" />
+                        <HyperlinkButton x:Name="hyperDev" Content="Celestial Doom" HorizontalAlignment="Left" VerticalAlignment="Stretch" FontSize="22" Visibility="Visible" Foreground="Black" FontWeight="Bold" />
                         <Grid Height="50" />
                         <Image Height="100" HorizontalAlignment="Left" Source="Assets/Square44x44Logo.targetsize-256.png" />
-                        <TextBlock Text="App Logo" TextWrapping="Wrap" FontSize="24" />
-                        <HyperlinkButton x:Name="hyperLogo" Content="Icon Archive" HorizontalAlignment="Left" VerticalAlignment="Stretch" FontSize="22" Foreground="White" FontWeight="Bold" />
+                        <TextBlock Text="App Logo" TextWrapping="Wrap" FontSize="24" Foreground="Black" />
+                        <HyperlinkButton x:Name="hyperLogo" Content="Icon Archive" HorizontalAlignment="Left" VerticalAlignment="Stretch" FontSize="22" Foreground="Black" FontWeight="Bold" />
                         <TextBlock Text="Donations" TextWrapping="Wrap" FontSize="24" Visibility="Collapsed" />
                         <Button Content="Donations" HorizontalAlignment="Left" VerticalAlignment="Stretch" FontSize="22" Foreground="White" Visibility="Collapsed" />
                     </StackPanel>
                 </PivotItem>
                 <PivotItem x:Name="_PivotPrivacy" Header="Privacy" Foreground="White">
-                    <ScrollViewer x:Name="ScrollViewPrivacy" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="5,5,5,5" BorderBrush="#FFA0A0A0">
+                    <ScrollViewer x:Name="ScrollViewPrivacy" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="0,5,0,5" BorderBrush="#FFA0A0A0">
                         <Grid>
-                            <TextBlock x:Name="privacy" TextWrapping="Wrap" Text="privacy" FontSize="16" />
+                            <TextBlock x:Name="privacy" TextWrapping="Wrap" Text="privacy" FontSize="16" Foreground="Black" />
                         </Grid>
                     </ScrollViewer>
                 </PivotItem>
             </Pivot>
         </Grid>
+    </Grid>
     </Grid>
 </Page>
